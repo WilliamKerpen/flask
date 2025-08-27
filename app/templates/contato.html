@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contato</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="center">
+        <h2>Contato</h2>
+    </div>
+	
+
+	<form action="" method="post">
+        {{ form.csrf_token}}
+
+		<fieldset>
+			<legend>Detalhes de contatos</legend>
+			<div>
+				{{ form.nome.label() }}
+                {{ form.nome() }}
+			</div>
+			<div>
+                {{ form.email.label() }}
+                {{ form.email() }}
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Comentarios</legend>
+			<div>
+                {{ form.assunto.label() }}
+                {{ form.assunto() }}
+               
+                {{ form.mensagem.label() }}
+                {{ form.mensagem() }}
+				
+			</div>
+		</fieldset>
+        
+        {{form.btnSubmit()}}       
+        
+
+
+	</form>
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.center h2 {
+	text-align: center;
+}
+
+body{
+	font-family: "Trebuchet MS", Helvetica,sans-serif;
+}
+
+fieldset {
+	margin: 1em 0;
+	padding: 1em;
+	border: 1px solid #ccc;
+	background: #f8f8f8;
+}
+
+legend {
+	font-weight: bold;
+}
+
+label{
+	display: block;
+	cursor: pointer;
+}
+
+input {
+	width: 100%em;
+}
+
+textarea{
+	width: 100%;
+	height: 10em;
+}
+
+#assunto{
+	width: 100%;
+	height: 20px;
+}
+
+form{
+	width: 900px;
+	margin: auto;
+
+}
+.radio {
+	margin-right: 2em;
+}
+
+.botao{
+	background-color: #a5a5a5;
+	color: white ;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+button 	{
+	background-color: #a5a5a5;
+	color: black ;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+
