@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block content %}
+   
+    <div>
+        Nome: 
+        <input type="text" value="{{obj.nome}}" readonly>                
+    </div>
+     <div>
+        E-Mail: 
+        <input type="text" value="{{obj.email}}" readonly>                
+    </div>
+     <div>
+        Assunto: 
+        <input type="text" value="{{obj.assunto}}" readonly>                
+    </div>
+     <div>
+        Mensagem:
+        <textarea type="text" readonly>{{obj.mensagem}} </textarea>
+    </div>
+    
+    {{obj.nome}}
+
+{%endblock%}

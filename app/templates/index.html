@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudo flask</title>
-</head>
-<body>
+{%extends 'base.html'%}
+{%block content %}
+
     <h1>Minha Primeira Pagina HTML renderizado no Flask</h1>
+
+    {%include 'nav.html' %}
 
     <h3>Bem Vindo {{usuario}} ao curso</h3>
 
-    <a href="{{url_for('contato')}}">Contato</a>
     
-</body>
-</html>
+
+
+
+{%endblock%}

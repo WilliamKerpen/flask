@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Contato</title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
-</head>
-<body>
-    <div class="center">
+{%extends 'base.html'%}
+{%block content %}
+
+{%include 'nav.html' %}
+
+<div class="center">
         <h2>Contato</h2>
     </div>
 	
@@ -45,5 +41,4 @@
 	</form>
 
 
-</body>
-</html>
+{%endblock%}

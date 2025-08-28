@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+{%block content %}
+
+{%include 'nav.html' %}
+    <div>
+        <h1>Lista de Contatos</h1>
+    </div>
+    
+    <div>
+        <form method="get">
+            <div>
+                <input type = "text" name ='pesquisa'>
+            </div>
+            <div>
+                <button type="submit">Pesquisar</button>
+            </div>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-Mail</th>
+                    <th>Assunto</th>
+                    <th>Respondido</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for linha in context ['dados']%}
+                <tr>
+                    <td>{{linha.nome}}</td>
+                    <td>{{linha.email}}</td>
+                    <td>{{linha.assunto}}</td> 
+                    <td>
+                        {% if linha.respondido == 0 %}
+                            Nao
+                        {% else %}
+                            Sim
+                        {% endif %}
+
+                    </td>
+                    <td><a href="{{url_for('contatoDetail',id=linha.id)}}">link para contato</a></td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+{%endblock%}
